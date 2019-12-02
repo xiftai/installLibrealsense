@@ -4,7 +4,7 @@
 # Build kernel to include tegra usb firmware
 
 JETSON_MODEL="NVIDIA Jetson Nano Developer Kit"
-L4T_TARGET="32.2.1"
+L4T_TARGET="32.2.3"
 L4T_VERSION=vL4T$L4T_TARGET
 SOURCE_TARGET="/usr/src"
 KERNEL_RELEASE="4.9"
@@ -97,7 +97,7 @@ if [ -d "$BUILD_REPOSITORY" ] ; then
    echo "buildModules and Kernel previously installed"
 else
    echo "Installing buildModulesAndKernel"
-   git clone https://github.com/jetsonhacksnano/buildKernelAndModules "$BUILD_REPOSITORY"
+   git clone https://github.com/xiftai/buildKernelAndModules "$BUILD_REPOSITORY"
    cd $BUILD_REPOSITORY
    git checkout $L4T_VERSION
 fi
